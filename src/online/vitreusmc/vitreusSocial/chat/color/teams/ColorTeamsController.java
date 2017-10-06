@@ -1,4 +1,4 @@
-package online.vitreusmc.vitreusSocial.chatColor.teams;
+package online.vitreusmc.vitreusSocial.chat.color.teams;
 
 import java.util.logging.Level;
 

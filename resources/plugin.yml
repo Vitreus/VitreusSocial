@@ -28,4 +28,11 @@ commands:
     usage: /color <color>
     aliases: [dark_blue, blue, dark_aqua, aqua, red, gold, dark_gray, gray, black, green, dark_green, light_purple, white, yellow, dark_purple, dark_red]
     permission: milestone.12
-  
+  local:
+    description: Chat locally!
+    usage: /local on | /local <Message>
+    aliases: [lc, l, localchat]
+  global:
+    description: Chat globally!
+    usage: /global on | /global <Message>
+    aliases: [gc, g, globalchat]

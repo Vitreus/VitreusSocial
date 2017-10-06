@@ -1,4 +1,4 @@
-package online.vitreusmc.vitreusSocial.chatColor.teams;
+package online.vitreusmc.vitreusSocial.chat.color.teams;
 
 public enum ColorTeam {
 	DARK_GREEN,

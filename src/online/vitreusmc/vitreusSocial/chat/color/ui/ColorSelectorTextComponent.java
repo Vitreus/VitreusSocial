@@ -1,4 +1,4 @@
-package online.vitreusmc.vitreusSocial.chatColor.ui;
+package online.vitreusmc.vitreusSocial.chat.color.ui;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.ClickEvent;

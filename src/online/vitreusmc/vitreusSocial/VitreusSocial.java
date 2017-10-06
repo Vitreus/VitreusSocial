@@ -8,9 +8,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitScheduler;
 
 import online.vitreusmc.vitreusSocial.admin.SetPlaytimeCommand;
-import online.vitreusmc.vitreusSocial.chatColor.ColorCommand;
-import online.vitreusmc.vitreusSocial.chatColor.teams.ColorTeamsController;
-import online.vitreusmc.vitreusSocial.chatFormatting.ChatListener;
+import online.vitreusmc.vitreusSocial.chat.color.teams.ColorTeamsController;
+import online.vitreusmc.vitreusSocial.chat.ChatInterceptor;
+import online.vitreusmc.vitreusSocial.chat.ChatRouter;
+import online.vitreusmc.vitreusSocial.chat.color.ColorCommand;
+import online.vitreusmc.vitreusSocial.chat.format.MessageFormatter;
 import online.vitreusmc.vitreusSocial.time.PlayTimeCommand;
 import online.vitreusmc.vitreusSocial.time.milestones.MilestoneListener;
 import online.vitreusmc.vitreusSocial.time.milestones.MilestoneWatcher;
@@ -40,6 +42,7 @@ public class VitreusSocial extends JavaPlugin {
 		initialize();
 		registerCommands();
 		registerListeners();
+		registerPostListeners();
 	}
 	
 	private void initialize() {
@@ -53,10 +56,15 @@ public class VitreusSocial extends JavaPlugin {
 	}
 	
 	private void registerListeners() {
-		server.getPluginManager().registerEvents(new ChatListener(), this);
+		server.getPluginManager().registerEvents(new ChatInterceptor(), this);
+		server.getPluginManager().registerEvents(new MessageFormatter(), this);
 		server.getPluginManager().registerEvents(new MilestoneListener(), this);
 		server.getPluginManager().registerEvents(new PlayerJoinListener(), this);
 		server.getPluginManager().registerEvents(new NewPlayerListener(), this);
+	}
+	
+	private void registerPostListeners() {
+		server.getPluginManager().registerEvents(new ChatRouter(), this);
 	}
 	
 }

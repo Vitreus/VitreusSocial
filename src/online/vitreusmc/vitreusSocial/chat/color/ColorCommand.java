@@ -1,4 +1,4 @@
-package online.vitreusmc.vitreusSocial.chatColor;
+package online.vitreusmc.vitreusSocial.chat.color;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -6,9 +6,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import net.md_5.bungee.api.ChatColor;
-import online.vitreusmc.vitreusSocial.chatColor.teams.ColorTeam;
-import online.vitreusmc.vitreusSocial.chatColor.teams.ColorTeamsController;
-import online.vitreusmc.vitreusSocial.chatColor.ui.ColorSelectorTextComponent;
+import online.vitreusmc.vitreusSocial.chat.color.teams.ColorTeam;
+import online.vitreusmc.vitreusSocial.chat.color.teams.ColorTeamsController;
+import online.vitreusmc.vitreusSocial.chat.color.ui.ColorSelectorTextComponent;
 
 public class ColorCommand implements CommandExecutor {
 
