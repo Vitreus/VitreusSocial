@@ -22,7 +22,7 @@ commands:
   playtime:
     description: Print out your time played!
     usage: /playtime
-    aliases: [time, mytime, played]
+    aliases: [mytime, played]
   color:
     description: Set your chat color!
     usage: /color <color>

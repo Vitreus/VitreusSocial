@@ -108,6 +108,8 @@ public class ColorCommand implements CommandExecutor {
 				player.sendMessage(ChatColor.RED + "Unknown Color!");
 			}
 		}
+		
+		player.setPlayerListName(ColorTeamsController.get().getPlayerColor(player) + playerName);
 	}
 
 }

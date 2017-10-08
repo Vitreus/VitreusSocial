@@ -17,6 +17,7 @@ public class Message {
 	private String message;
 	private String seperator = ChatColor.GRAY + "" + ChatColor.BOLD + ": " + ChatColor.RESET;
 	private List<Entity> recipients = new ArrayList<Entity>();
+	private boolean local = false;
 	
 	public Message(Player author, String content) {
 		this.author = author;
@@ -104,5 +105,13 @@ public class Message {
 	
 	public void updateMessage() {
 		this.message = label + seperator + content;
+	}
+	
+	public boolean isLocal() {
+		return local;
+	}
+	
+	public void setLocal(boolean local) {
+		this.local = local;
 	}
 }

@@ -1,9 +1,8 @@
 package online.vitreusmc.vitreusSocial.chat.color.teams;
 
-import java.util.logging.Level;
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.Team;
 
@@ -187,5 +186,19 @@ public class ColorTeamsController {
 		}
 		
 		return true;
+	}
+	
+	public Team getPlayerTeam(Player player) {
+		return player.getScoreboard().getEntryTeam(player.getName());
+	}
+	
+	public ChatColor getPlayerColor(Player player) {
+		ChatColor color = Bukkit.getServer().getScoreboardManager().getMainScoreboard().getEntryTeam(player.getName()).getColor();
+		
+		if (color == null) {
+			color = ChatColor.WHITE;
+		}
+		
+		return color;
 	}
 }
