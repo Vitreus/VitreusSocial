@@ -193,9 +193,11 @@ public class ColorTeamsController {
 	}
 	
 	public ChatColor getPlayerColor(Player player) {
-		ChatColor color = Bukkit.getServer().getScoreboardManager().getMainScoreboard().getEntryTeam(player.getName()).getColor();
+		ChatColor color;
 		
-		if (color == null) {
+		try {
+			color = Bukkit.getServer().getScoreboardManager().getMainScoreboard().getEntryTeam(player.getName()).getColor();
+		} catch (NullPointerException exception) {
 			color = ChatColor.WHITE;
 		}
 		

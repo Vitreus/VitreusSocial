@@ -58,7 +58,6 @@ public class ChatRouter implements Listener {
 			} else {
 				recipients.add(author);
 			}
-			
 		} else {
 			recipients.addAll((Collection<Entity>) Bukkit.getOnlinePlayers());
 		}

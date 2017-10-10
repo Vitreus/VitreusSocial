@@ -3,7 +3,9 @@ package online.vitreusmc.vitreusSocial.chat.message;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.logging.Level;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -39,6 +41,8 @@ public class Message {
 		for (Entity recipient : recipients) {
 			recipient.sendMessage(message);
 		}
+		
+		Bukkit.getServer().getLogger().log(Level.INFO, author.getName() + ": " + content);
 	}
 	
 	public void addRecipient(Entity recipient) {
