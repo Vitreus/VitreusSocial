@@ -42,7 +42,9 @@ public class Message {
 			recipient.sendMessage(message);
 		}
 		
-		Bukkit.getServer().getLogger().log(Level.INFO, author.getName() + ": " + content);
+		if (!local) {
+			Bukkit.getServer().getLogger().log(Level.INFO, author.getName() + ": " + content);			
+		}
 	}
 	
 	public void addRecipient(Entity recipient) {
