@@ -17,6 +17,8 @@ import online.vitreusmc.vitreusSocial.chat.format.LocalMessageFormatter;
 import online.vitreusmc.vitreusSocial.chat.global.GlobalCommand;
 import online.vitreusmc.vitreusSocial.chat.local.LocalCommand;
 import online.vitreusmc.vitreusSocial.time.PlayTimeCommand;
+import online.vitreusmc.vitreusSocial.time.afk.IdleCounter;
+import online.vitreusmc.vitreusSocial.time.afk.ActivityWatcher;
 import online.vitreusmc.vitreusSocial.time.milestones.MilestoneListener;
 import online.vitreusmc.vitreusSocial.time.milestones.MilestoneWatcher;
 import online.vitreusmc.vitreusSocial.time.milestones.PlayerJoinListener;
@@ -41,6 +43,7 @@ public class VitreusSocial extends JavaPlugin {
 		this.scheduler = server.getScheduler();
 		
 		scheduler.runTaskTimerAsynchronously(this, new MilestoneWatcher(), 20 * 60, 20 * 60);
+		scheduler.runTaskTimer(this, new IdleCounter(), 20 * 60, 20 * 60);
 		
 		initialize();
 		registerCommands();
@@ -67,6 +70,7 @@ public class VitreusSocial extends JavaPlugin {
 		server.getPluginManager().registerEvents(new MilestoneListener(), this);
 		server.getPluginManager().registerEvents(new PlayerJoinListener(), this);
 		server.getPluginManager().registerEvents(new NewPlayerListener(), this);
+		server.getPluginManager().registerEvents(new ActivityWatcher(), this);
 	}
 	
 	private void registerPostListeners() {
