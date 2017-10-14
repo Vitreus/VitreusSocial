@@ -19,7 +19,13 @@ public class IdleCounter extends BukkitRunnable {
 	public void run() {
 		
 		for (Player player : server.getOnlinePlayers()) {
-			int idleTime = player.getMetadata("idle.time").get(0).asInt();
+			int idleTime;
+			
+			if (player.hasMetadata("idle.time")) {
+				idleTime = player.getMetadata("idle.time").get(0).asInt();
+			} else {
+				idleTime = 0;
+			}
 			
 			player.setMetadata("idle.time", new FixedMetadataValue(plugin, idleTime + 1));
 			

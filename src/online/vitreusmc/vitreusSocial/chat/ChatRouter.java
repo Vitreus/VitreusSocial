@@ -10,17 +10,32 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.metadata.FixedMetadataValue;
+import org.bukkit.plugin.java.JavaPlugin;
 
+import online.vitreusmc.vitreusSocial.VitreusSocial;
 import online.vitreusmc.vitreusSocial.chat.color.teams.ColorTeamsController;
 import online.vitreusmc.vitreusSocial.chat.message.Message;
 import online.vitreusmc.vitreusSocial.chat.message.MessageEvent;
 
 public class ChatRouter implements Listener {
 	
+	private static JavaPlugin plugin = JavaPlugin.getPlugin(VitreusSocial.class);
+	
 	@EventHandler
 	public void onMessage(MessageEvent event) {
 		Message message = event.getMessage();
 		route(message);
+	}
+	
+	@EventHandler
+	public void onPlayerJoin(PlayerJoinEvent event) {
+		try {
+			event.getPlayer().getMetadata("chat.local").get(0).asBoolean();
+		} catch (Exception exception) {
+			event.getPlayer().setMetadata("chat.local", new FixedMetadataValue(plugin, false));
+		}
 	}
 	
 	public void route(Message message) {

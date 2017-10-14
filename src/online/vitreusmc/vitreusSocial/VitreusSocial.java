@@ -11,6 +11,7 @@ import online.vitreusmc.vitreusSocial.admin.SetPlaytimeCommand;
 import online.vitreusmc.vitreusSocial.chat.ChatInterceptor;
 import online.vitreusmc.vitreusSocial.chat.ChatRouter;
 import online.vitreusmc.vitreusSocial.chat.color.ColorCommand;
+import online.vitreusmc.vitreusSocial.chat.color.ListNameSetter;
 import online.vitreusmc.vitreusSocial.chat.color.teams.ColorTeamsController;
 import online.vitreusmc.vitreusSocial.chat.format.GlobalMessageFormatter;
 import online.vitreusmc.vitreusSocial.chat.format.LocalMessageFormatter;
@@ -71,6 +72,7 @@ public class VitreusSocial extends JavaPlugin {
 		server.getPluginManager().registerEvents(new PlayerJoinListener(), this);
 		server.getPluginManager().registerEvents(new NewPlayerListener(), this);
 		server.getPluginManager().registerEvents(new ActivityWatcher(), this);
+		server.getPluginManager().registerEvents(new ListNameSetter(), this);
 	}
 	
 	private void registerPostListeners() {
