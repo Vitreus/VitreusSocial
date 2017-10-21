@@ -7,6 +7,7 @@ import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import net.md_5.bungee.api.ChatColor;
 import online.vitreusmc.vitreusSocial.VitreusSocial;
 
 
@@ -31,6 +32,8 @@ public class IdleCounter extends BukkitRunnable {
 			
 			if (idleTime > 60) {
 				player.kickPlayer("You've been idle for too long!");
+			} else if (idleTime > 15 && !AFKManager.isAFK(player)) {
+				AFKManager.setAFK(player, true, false);
 			}
 		}
 	}
