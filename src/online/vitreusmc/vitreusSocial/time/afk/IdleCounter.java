@@ -32,7 +32,7 @@ public class IdleCounter extends BukkitRunnable {
 			
 			if (idleTime > 60) {
 				player.kickPlayer("You've been idle for too long!");
-			} else if (idleTime > 15 && !AFKManager.isAFK(player)) {
+			} else if (idleTime > 5 && !AFKManager.isAFK(player)) {
 				AFKManager.setAFK(player, true, false);
 			}
 		}

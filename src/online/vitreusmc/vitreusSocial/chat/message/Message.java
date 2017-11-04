@@ -42,9 +42,17 @@ public class Message {
 			recipient.sendMessage(message);
 		}
 		
-		if (!local) {
-			Bukkit.getServer().getLogger().log(Level.INFO, author.getName() + ": " + content);			
+		if (local) {
+			return;
 		}
+	
+		if (!(author instanceof Player)) {
+			return;
+		}
+		
+		Player player = (Player) author;
+		
+		Bukkit.getServer().getLogger().log(Level.INFO, player.getPlayerListName() + ": " + content);			
 	}
 	
 	public void addRecipient(Entity recipient) {

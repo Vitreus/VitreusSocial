@@ -1,5 +1,6 @@
 package online.vitreusmc.vitreusSocial.time.afk;
 
+import org.bukkit.Statistic;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
