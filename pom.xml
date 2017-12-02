@@ -77,7 +77,12 @@
                     	<configuration>
                         	<artifactSet>
                             	<includes>
+<<<<<<< HEAD
                                 	<include>online.vitreusmc.vitreusConnect</include>
+=======
+                                	<include>org.mongodb</include>
+                                	<include>org.mongodb.morphia</include>
+>>>>>>> 1c4a541e539b06158c9c7897fd3e3c5eebb5c40c
                             	</includes>
                         	</artifactSet>
                         	<createDependencyReducedPom>false</createDependencyReducedPom>
