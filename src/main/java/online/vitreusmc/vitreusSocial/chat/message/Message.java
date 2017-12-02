@@ -52,7 +52,7 @@ public class Message {
 		
 		Player player = (Player) author;
 		
-		Bukkit.getServer().getLogger().log(Level.INFO, player.getPlayerListName() + ": " + content);			
+		Bukkit.getServer().getLogger().log(Level.INFO, player.getName() + ": " + content);
 	}
 	
 	public void addRecipient(Entity recipient) {
