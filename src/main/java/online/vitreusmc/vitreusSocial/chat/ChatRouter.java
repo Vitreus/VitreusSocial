@@ -14,8 +14,8 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import net.minecraft.server.EntityPlayer;
 import online.vitreusmc.vitreusSocial.VitreusSocial;
-import online.vitreusmc.vitreusSocial.chat.color.teams.ColorTeamsController;
 import online.vitreusmc.vitreusSocial.chat.message.Message;
 import online.vitreusmc.vitreusSocial.chat.message.MessageEvent;
 

@@ -5,7 +5,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
-import net.minecraft.server.Entity;
 import online.vitreusmc.vitreusSocial.chat.message.Message;
 import online.vitreusmc.vitreusSocial.chat.message.MessageEvent;
 import online.vitreusmc.vitreusSocial.chat.message.MessageFactory;
