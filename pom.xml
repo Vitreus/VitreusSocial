@@ -78,7 +78,7 @@
                         	<artifactSet>
                             	<includes>
                                 	<include>online.vitreusmc.vitreusConnect</include>
-                            	</includes>
+                           	</includes>
                         	</artifactSet>
                         	<createDependencyReducedPom>false</createDependencyReducedPom>
                     	</configuration>
