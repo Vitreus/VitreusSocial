@@ -1,4 +1,4 @@
-package online.vitreusmc.vitreusSocial.time;
+package online.vitreusmc.vitreusSocial.command;
 
 import org.bukkit.Statistic;
 import org.bukkit.command.Command;

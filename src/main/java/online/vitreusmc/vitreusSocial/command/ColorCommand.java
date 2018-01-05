@@ -1,4 +1,4 @@
-package online.vitreusmc.vitreusSocial.chat.color;
+package online.vitreusmc.vitreusSocial.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

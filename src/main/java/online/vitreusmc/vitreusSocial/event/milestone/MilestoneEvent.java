@@ -1,4 +1,4 @@
-package online.vitreusmc.vitreusSocial.time.milestones;
+package online.vitreusmc.vitreusSocial.event.milestone;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;

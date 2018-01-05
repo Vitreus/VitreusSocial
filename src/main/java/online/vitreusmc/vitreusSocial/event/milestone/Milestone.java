@@ -1,4 +1,4 @@
-package online.vitreusmc.vitreusSocial.time.milestones;
+package online.vitreusmc.vitreusSocial.event.milestone;
 
 public enum Milestone {
 	TWELVEHOUR,

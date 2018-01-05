@@ -7,6 +7,7 @@ import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,7 +15,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import net.minecraft.server.EntityPlayer;
 import online.vitreusmc.vitreusSocial.VitreusSocial;
 import online.vitreusmc.vitreusSocial.chat.message.Message;
 import online.vitreusmc.vitreusSocial.chat.message.MessageEvent;
@@ -74,7 +74,7 @@ public class ChatRouter implements Listener {
 				recipients.add(author);
 			}
 		} else {
-			recipients.addAll((Collection<Entity>) Bukkit.getOnlinePlayers());
+			recipients.addAll((Collection<Player>) Bukkit.getOnlinePlayers());
 		}
 		
 		message.addRecipients(recipients);

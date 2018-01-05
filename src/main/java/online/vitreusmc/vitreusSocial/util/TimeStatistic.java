@@ -1,4 +1,4 @@
-package online.vitreusmc.vitreusSocial.time.util;
+package online.vitreusmc.vitreusSocial.util;
 
 import org.bukkit.Statistic;
 import org.bukkit.entity.Player;

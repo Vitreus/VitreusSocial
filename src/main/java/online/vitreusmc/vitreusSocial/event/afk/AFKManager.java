@@ -1,4 +1,4 @@
-package online.vitreusmc.vitreusSocial.time.afk;
+package online.vitreusmc.vitreusSocial.event.afk;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
