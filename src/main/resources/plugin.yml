@@ -1,7 +1,7 @@
-main: online.vitreusmc.vitreusSocial.VitreusSocial
+main: com.vitreusmc.social.VitreusSocial
 
 name: VitreusSocial
-version: 0.0.1
+version: 0.5.0
 permissions:
   milestone.12:
     default: false
@@ -23,6 +23,14 @@ commands:
     description: Print out your time played!
     usage: /playtime
     aliases: [mytime, played]
+  idle:
+    description: Announce yourself as idle!
+    usage: /idle
+    aliases: [afk, away]
+  seen:
+    description: Lookup the last time someone was online!
+    usage: /seen <Username>
+    aliases: [last, when]
   color:
     description: Set your chat color!
     usage: /color <color>
