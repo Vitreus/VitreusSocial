@@ -2,9 +2,9 @@
 <project>
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>online.vitreusmc.vitreusSocial</groupId>
+	<groupId>com.vitreusmc</groupId>
 	<artifactId>VitreusSocial</artifactId>
-	<version>0.2.0</version>
+	<version>0.5.0-SNAPSHOT</version>
 	
 	<packaging>jar</packaging>
 	
@@ -34,26 +34,16 @@
     	</dependency>
     
     	<!--Vitreus-->
+
     	<dependency>
-    		<groupId>online.vitreusmc.vitreusConnect</groupId>
-    		<artifactId>VitreusConnect</artifactId>
-    		<version>0.2.0</version>
-    		<scope>system</scope>
-    		<systemPath>/home/mason/Workspace/Vitreus/VitreusConnect/target/VitreusConnect-0.2.0.jar</systemPath>
+    		<groupId>com.vitreusmc</groupId>
+    		<artifactId>VitreusLib</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
     	</dependency>
-		
 	</dependencies>
 	
 	<build>
 		<defaultGoal>package</defaultGoal>
-		<resources>
-			<resource>
-				<directory>src</directory>
-			</resource>
-			<resource>
-				<directory>resources</directory>
-			</resource>
-		</resources>
     	<plugins>
     		<plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
@@ -77,7 +67,7 @@
                     	<configuration>
                         	<artifactSet>
                             	<includes>
-                                	<include>online.vitreusmc.vitreusConnect</include>
+                                	<include>com.vitreusmc:VitreusLib</include>
                             	</includes>
                         	</artifactSet>
                         	<createDependencyReducedPom>false</createDependencyReducedPom>
